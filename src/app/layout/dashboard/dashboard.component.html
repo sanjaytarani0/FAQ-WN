@@ -1,0 +1,49 @@
+<div class="container-fluid dashboardContainer"> 
+
+  <app-banners></app-banners>
+
+  <div class="row myWalletRow">
+
+    <div class="col-lg-4 col-md-12 col-sm-12">
+
+      <div class="myWalletDiv">
+        <p class="walletTitle">My Wallet</p>
+        <div class="walletInfoDiv">
+          <img class="ethIcon" src="../../../assets/ether.png" alt="">
+          <div>
+            <p>ETH</p>
+            <P class="ethAmount">{{ethBalance | number : '1.7-8'}}</P>
+          </div>
+        </div>
+        <p class="dollarValue">$ {{ethUSD | number : '1.1-2'}}</p>
+      </div>
+
+      <div class="tokensMainDiv">
+        <div class="tokenDiv" *ngFor="let token of ERCtokenList">
+          <div class="tokenIconDiv">
+              <img *ngIf="token.symbol == 'BNB'" src="../../../assets/bnb.png" alt="">
+              <img *ngIf="token.symbol == 'VEN'" src="../../../assets/VeChain.png" alt="">
+              <img *ngIf="token.symbol == 'MKR'" src="../../../assets/Maker.png" alt="">
+              <img *ngIf="token.symbol == 'ZRX'" src="../../../assets/ZRX.png" alt="">
+              <img *ngIf="token.symbol == 'OMG'" src="../../../assets/OmiseGO.png" alt="">
+              <img *ngIf="token.symbol == 'ETH'" src="../../../assets/ether.png" alt="">
+            <div class="tokenSubDiv">
+                <p class="tokenName">{{token.symbol}}</p>
+                <P class="tokenDollarValue">$ {{token.dollarValue | number : '1.1-2'}}</P>
+            </div>
+          </div>  
+            <p class="tokenValue">{{token.balance | number : '1.7-8'}}</p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="col-lg-8 col-md-12 col-sm-12">
+      <app-send-crypto></app-send-crypto>
+      <app-transaction-list></app-transaction-list>
+    </div>
+  </div>
+
+</div>
+
+

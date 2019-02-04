@@ -1,0 +1,38 @@
+<div class="transactionListContainer"> 
+
+  <div class="titleDiv">
+   <p>Latest Transactions</p>
+   <a>View All</a>
+  </div>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Date</th>
+        <th>From</th>
+        <th>To</th>
+        <th>Amount</th>
+        <th>Type</th>
+      </tr>
+    </thead>
+
+    <tbody *ngIf="!isLoading && transactionStatus == '1'">
+      <tr *ngFor="let list of transactionListDetails;let i=index">
+          <ng-container *ngIf="i<5">
+        <td>{{list.timeStamp * 1000 | date: 'MM-dd-yyyy'}}</td>
+        <td>{{list.from}}</td>
+        <td>{{list.to}}</td>
+        <td>{{list.value | number : '1.8-9'}}</td>
+        <td *ngIf="list.from == ethAddress"> <span class="sentLabel"> Sent </span></td>
+        <td *ngIf="list.from != ethAddress"> <span class="receiveLabel"> Received </span></td>
+        </ng-container>
+      </tr>
+  
+    </tbody>
+  </table>
+  
+  <img *ngIf="isLoading" src="../../../../assets/loader3.gif" class="preLoaderImage" alt="">
+  <p class="text-center" *ngIf="!isLoading && transactionStatus == '0'">No Transactions Found</p>
+
+
+</div>

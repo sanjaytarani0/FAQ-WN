@@ -1,0 +1,79 @@
+@import '../../../scss/vars';
+
+.headerMainDiv {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    height: 60px;
+    background: #334194;
+    padding: 0px 40px;
+    .qc-logo {
+        width: 100px;
+    }
+    .searchBoxDiv {
+        .searchBoxContainer {
+          display: flex;
+          align-items: center;
+          flex-direction: row;
+          justify-content: flex-start;
+        }
+  
+        .form-control {
+          border: none;
+          background: #101f78;
+          box-shadow: none;
+          border-radius: 0px;
+          color: white;
+          height: 60px;
+          padding: 15px;
+          cursor: text;
+          width: 483px;
+        }
+        ::placeholder {
+          color: white;
+          font-size: 13px;
+        }
+        a {
+          color: white;
+          cursor: pointer;
+          background-color: #3490ce;
+          height: 60px;
+          line-height: 58px;
+          padding: 0px 20px;
+  
+          img {
+            width: 22px;
+          }
+        }
+      }
+}
+
+@media only screen and (max-width: 767px) { 
+    .headerMainDiv {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        height: auto !important;
+        background: #334194;
+        padding: 0px 0px !important;
+
+        .qc-logo {
+           margin: 15px !important
+        }
+
+        .searchBoxContainer {
+            flex-wrap: nowrap !important;
+        }
+
+        .searchBoxDiv {
+            width: 100vw !important;
+            padding: 0px !important;
+
+            .form-control {
+                width: 100%;
+            }
+        }
+    }
+}

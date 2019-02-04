@@ -1,0 +1,133 @@
+@import "../../../../scss/vars";
+
+.mainDiv {
+  background-color: #f6faff;
+  display: flex;
+  align-items: center;
+  height: 50px;
+
+  .title {
+    margin-bottom: 0px;
+    padding: 10px 15px;
+    font-size: 14px;
+    color: #919fb1;
+    font-family: $main-font;
+
+    .keyIcon {
+      font-weight: 900;
+      background: #b5c5d9;
+      padding: 10px;
+      border-radius: 5px;
+      color: white;
+      margin-right: 8px;
+    }
+  }
+}
+
+.downloadSection {
+  background: #ffffff;
+  min-height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  padding: 10px 15px;
+
+  p {
+    margin-bottom: 0px;
+    color: #949494;
+    font-size: 16px;
+    font-family: $main-font;
+  }
+  // button {
+  //     background: #3490ce;
+  //     color: white;
+  //     font-family: $main-font;
+
+  // }
+
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 70px;
+    height: 35px;
+  }
+  .switch input {
+    display: none;
+  }
+
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+  }
+
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: #ccc;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+  }
+
+  input:checked + .slider {
+    background-color: white;
+  }
+
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196f3;
+  }
+
+  input:checked + .slider:before {
+    -webkit-transform: translateX(34px);
+    -ms-transform: translateX(34px);
+    transform: translateX(34px);
+  }
+
+  .slider.round {
+    border-radius: 34px;
+  }
+
+  .slider.round:before {
+    border-radius: 50%;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+    .mainDiv {
+        .title {
+            font-size: 12px;
+        }
+    }
+  .downloadSection {
+    background: #ffffff;
+    min-height: 100px;
+    display: flex;
+    justify-content: space-between !important;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px 15px;
+    text-align: center;
+    
+    p {
+        margin-top: 10px;
+        font-size: 13px !important;
+    }
+
+    label {
+        margin-top: 15px;
+    }
+  }
+}

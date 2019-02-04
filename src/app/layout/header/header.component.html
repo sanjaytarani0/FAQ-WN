@@ -1,0 +1,87 @@
+<div class="disclaimerMessage">
+  <p>DISCLAIMER: You are using Alpha release version of the Smart Crypto payments feature.</p>
+  <p>Please consider this as a hot wallet for daily transactions to receive crypto-currency.</p>
+</div>
+
+<div class="HeaderContainer">
+<div class="addressHeaderMainDiv">
+    <div class="addressDiv">
+        <p>MY ADDRESS - <span *ngIf="!isLoading">{{ethAddress}}</span> <img *ngIf="isLoading" class="bar-loader" src="../../../assets/bar-loader.gif" alt=""></p>
+        <p class="copyIcon" (click)="copyText(ethAddress)"><i class="far fa-clone"></i></p>
+    </div>
+    <div class="searchBoxDiv">
+      <span class="form-inline searchBoxContainer">
+        <input autocomplete="off" (keyup.enter)="search()" class="form-control" name="search" 
+          type="text" placeholder="Search for a quixxi user" aria-label="Search">
+        <a (click)="search()"><img src="../../../assets/search-icon.png" alt=""></a>
+      </span>
+    </div>
+</div>
+</div>
+
+<span class="navbarContainer">
+<nav class="navbar navbar-expand-lg navbar-light mainHeader">
+    <a class="navbar-brand"><img src="../../../assets/qc.png" alt=""> </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show" [routerLink]="['/layout/dashboard']" routerLinkActive="menu-active">
+          <a class="nav-link" >Dashboard</a>
+        </li>
+        <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show" [routerLink]="['/layout/market']" routerLinkActive="menu-active">
+          <a class="nav-link" >Market</a>
+        </li>
+        <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
+          <a class="nav-link" >Gift Tokens</a>
+        </li>
+        <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
+            <a class="nav-link" >Buy Crypto</a>
+          </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <img class="profileImage" src="../../../assets/avatar.png" alt=""> &nbsp;&nbsp; {{userEmail}}  &nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-chevron-down"></i>
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <img class="dropdownProfileImage" src="../../../assets/avatar.png" alt="">
+            <p class="userName">John doe</p>
+            <p class="userEmail">test@gmail.com</p>
+            <div class="dropdown-divider"></div>            
+            <a class="dropdown-item customLinks" [routerLink]="['/layout/profile']" routerLinkActive="dropdown-menu-active"><span><i class="fas fa-user"></i></span> Profile</a>
+            <a class="dropdown-item customLinks" [routerLink]="['/layout/settings']" routerLinkActive="dropdown-menu-active"><span><i class="fas fa-cog"></i></span> Settings</a>
+            <a class="dropdown-item customLinks" (click)="logout()"><span><i class="fas fa-power-off"></i></span> Logout</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</span>
+
+
+<div class="modal fade" id="securityModal" role="dialog">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-body">
+          
+          <button type="button" class="close" data-dismiss="modal">&times;</button><br>
+          
+          <div class="contentDiv">
+          <p class="title">Private Key Security</p>
+          <p class="content1">Please backup your private key & mnemonic text in a secure location. We do not store this private key in our cloud servers and hence only you can access your money linked with your private key! </p>
+          <p class="content2">Your private key is stored in Google in the following location <b>“appDataFolder"</b> in an encrypted form. Please keep the access to this file, only for yourself and not to any other apps.</p>
+
+              <div class="form-check">
+                  <input type="checkbox" class="form-check-input" id="doNotShow">
+                  <label class="form-check-label" for="doNotShow">Do not show this dialog when I Login</label>
+              </div>
+
+              <button class="btn btn-block agreeButton">I AGREE</button>
+
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>

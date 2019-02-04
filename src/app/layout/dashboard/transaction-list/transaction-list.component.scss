@@ -1,0 +1,65 @@
+.transactionListContainer {
+  background: white;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  padding: 15px;
+  border-radius: 6px;
+  overflow-x: auto;
+
+  .preLoaderImage {
+    margin: 0 auto;
+    display: block;
+    margin-top: 25px;
+  }
+
+  .titleDiv {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+
+    p {
+      color: #2968ca;
+      font-weight: bold;
+    }
+
+    a {
+        color: #2968ca;
+        cursor: pointer;
+    }
+  }
+
+
+  table {
+    th{
+      text-align: center;
+      text-transform: uppercase;
+      background: #f4f9ff;
+      font-size: 14px;
+      padding: 15px 0px
+    }
+    td {
+      font-size: 11px;
+      text-align: center;
+      padding: 20px 0px;
+      color: #736e6e;
+    }
+  }
+  .receiveLabel {
+    background-color: #31c487;
+    padding: 5px 15px;
+    border-radius: 16px;
+    color: white;
+    text-transform: uppercase;
+    font-size: 10px;
+    font-weight: bold;
+  }
+  .sentLabel {
+    background-color: #e3be2c;
+    padding: 5px 15px;
+    border-radius: 16px;
+    color: white;
+    text-transform: uppercase;
+    font-size: 10px;
+    font-weight: bold;
+  }
+}

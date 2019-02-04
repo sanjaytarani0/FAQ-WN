@@ -1,0 +1,32 @@
+.bannerImage {
+  width: 100%;
+  border-radius: 6px;
+  height: 240px;
+}
+.carousel-inner {
+  height: 240px;
+  border-radius: 6px;
+}
+.carousel-caption {
+  top: 40px;
+}
+.carousel-item {
+  img {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .carousel {
+    margin-top: 25px;
+  }
+  .bannerImage {
+    height: auto !important;
+  }
+  .carousel-inner {
+    height: auto !important;
+  }
+  .carousel-caption {
+    top: 130px;
+  }
+}

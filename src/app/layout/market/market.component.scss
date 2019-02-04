@@ -1,0 +1,37 @@
+@import '../../../scss/vars';
+
+
+.marketContainer {
+  background: $body-bg-color;
+  min-height: 63vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+
+p:nth-child(1) {
+    font-size: 36px;
+    word-spacing: 15px;
+    letter-spacing: 3px;
+    font-weight: bold;
+    color: #334194;
+    text-align: center;
+    font-family: $main-font;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+p:last-child {
+    color: #334194;
+    text-align: center;
+    font-family: $main-font;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    word-spacing: 6px;
+}
+
+
+
+
+}

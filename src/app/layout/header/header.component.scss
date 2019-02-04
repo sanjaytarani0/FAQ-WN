@@ -1,0 +1,354 @@
+@import "../../../scss/vars";
+
+.disclaimerMessage {
+  background: #e21616;
+  p {
+    text-align: center;
+    margin: 0px;
+    font-size: 13px;
+    padding-bottom: 3px;
+    color: white;
+    font-weight: bold;
+  }
+}
+
+.HeaderContainer {
+  .addressHeaderMainDiv {
+    background: $top-header-bg-color;
+    height: 35px;
+    padding: 0px 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    .addressDiv {
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      justify-content: flex-start;
+
+
+
+      p {
+        margin: 0px;
+        color: white;
+        background: #101f78;
+        height: 35px;
+        line-height: 35px;
+        padding: 0px 10px;
+        font-size: 11px;
+
+        span {
+          font-size: 13px;
+        }
+
+        .bar-loader {
+          width: 40px;
+          
+        }
+      }
+      .copyIcon {
+        background: #3490ce;
+        padding: 0px 12px;
+        font-size: 13px;
+        cursor: pointer;
+      }
+    }
+
+    .searchBoxDiv {
+      .searchBoxContainer {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        justify-content: flex-start;
+      }
+
+      .form-control {
+        border: none;
+        background: #101f78;
+        box-shadow: none;
+        border-radius: 0px;
+        color: white;
+        height: 35px;
+        padding: 15px;
+        cursor: text;
+      }
+      ::placeholder {
+        color: white;
+        font-size: 13px;
+      }
+      a {
+        color: white;
+        cursor: pointer;
+        background-color: #3490ce;
+        height: 35px;
+        line-height: 32px;
+        padding: 0px 10px;
+
+        img {
+          width: 17px;
+        }
+      }
+    }
+  }
+
+
+  @media only screen and (max-width: 767px) {
+    .addressHeaderMainDiv {
+      background: #11499e;
+      flex-direction: column !important;
+      justify-content: flex-start !important;
+      align-items: flex-start;
+      height: auto;
+      padding: 0px;
+    }
+
+    .addressDiv {
+      width: 100vw;
+      justify-content: space-between !important;
+
+        p:nth-child(1) {
+          width: 100%;
+        }
+        p:last-child {
+          width: fit-content;
+        }
+    }
+
+    .searchBoxDiv {
+      width: 100vw;
+      border-top: 1px solid white;
+      .searchBoxContainer {
+        justify-content: space-between !important;
+        flex-flow: nowrap !important;
+      }
+
+      .form-control {
+        padding: 0px 10px !important;
+        cursor: text;
+        width: 100% !important;
+      }
+    }
+  }
+
+  @media only screen and (max-width: 375px) {
+    .addressDiv {
+      p {
+        font-size: 9px !important;
+
+        span {
+          font-size: 9px !important;
+        }
+      }
+      .copyIcon {
+        font-size: 13px !important;
+      }
+    }
+  }
+}
+
+.navbarContainer {
+  .menu-active {
+    border-bottom: 4px solid #2868c9;
+  }
+  .dropdown-menu-active {
+    background: #2868c9 !important;
+    color: white !important;
+  }
+  .mainHeader {
+    background: $navbar-bg-color;
+    padding: 0px 40px;
+    height: 60px;
+
+    .navbar-brand {
+      img {
+        width: 100px;
+      }
+    }
+
+    .navbar-nav {
+      li {
+        height: 60px;
+        line-height: 42px;
+        margin-left: 30px;
+        outline: none;
+        cursor: pointer;
+
+        a {
+          font-size: 14px;
+          font-family: $main-font;
+          color: #5a6575;
+        }
+
+        .dropdown-toggle::after {
+          display: none;
+      }
+
+        .dropdown-menu {
+          position: absolute;
+          border-radius: 0px;
+          width: 235px;
+          top: 55px;
+          left: -103px;
+          cursor: default;
+          .userName {
+            font-size: 12px;
+            color: #a5a5a5;
+            text-align: center;
+            font-weight: 600;
+            margin: 0px;
+            font-family: $main-font;
+          }
+          .userEmail {
+            font-size: 12px;
+            color: #a5a5a5;
+            text-align: center;
+            margin: 0px;
+            line-height: 0px;
+            margin-bottom: 30px;
+            font-family: $main-font;
+
+          }
+          .customLinks {
+            padding: 0 10px;
+            font-family: $main-font;
+            color: #949494;
+            cursor: pointer;
+              &:active {
+                text-decoration: none;
+                color: white;
+              }
+            span{
+              padding: 0px 8px;
+            }
+          }
+        }
+        .dropdownProfileImage {
+          height: 60px;
+          width: 60px;
+          margin: 0 auto;
+          display: block;
+          margin-top: 10px;
+          // margin-bottom: 10px;
+          cursor: default;
+        }
+      }
+    }
+
+    .profileImage {
+      width: 35px;
+    }
+  }
+
+  @media only screen and (max-width: 991px) {
+    .mainHeader {
+      padding: 10px 40px !important;
+      height: auto !important;
+    }
+    .navbar-nav li {
+      margin-left: 0px !important;
+    }
+  }
+
+  @media only screen and (max-width: 767px) {
+    .mainHeader {
+      padding: 10px !important;
+      height: auto !important;
+    }
+    .navbar-nav .dropdown-menu {
+      position: absolute !important;
+      right: 0 !important;
+      left: 0 !important;
+    }
+  }
+}
+
+// security modal css
+
+#securityModal {
+  .modal-dialog {
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .modal-body {
+    padding: 8px 15px;
+    .contentDiv {
+      padding: 0px 15px;
+
+      .title {
+        font-size: 20px;
+        font-weight: bold;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 1;
+        color: #334194;
+        font-family: $main-font;
+      }
+
+      .content1,
+      .content2 {
+        font-family: NunitoSans;
+        font-size: 16px;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 24px;
+        letter-spacing: normal;
+        color: #797979;
+        text-align: justify;
+        font-family: $main-font;
+      }
+      .form-check {
+        input[type="checkbox"] {
+          height: 22px;
+          width: 22px;
+          cursor: pointer;
+        }
+        .form-check-input {
+          margin-top: 2px;
+          margin-left: -22px;
+        }
+        label {
+          font-family: $main-font;
+          font-size: 16px;
+          font-weight: bold;
+          font-style: normal;
+          font-stretch: normal;
+          line-height: 1.25;
+          letter-spacing: normal;
+          text-align: justify;
+          color: #626262;
+          margin-left: 10px;
+          cursor: pointer;
+        }
+      }
+      .agreeButton {
+        margin-top: 30px;
+        margin-bottom: 5px;
+        height: 54px;
+        border-radius: 5px;
+        background-color: #3490ce;
+        color: white;
+        font-family: $main-font;
+        font-weight: bold;
+        letter-spacing: 0.5px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 400px) { 
+  .contentDiv {
+    .form-check {
+      label {
+        font-size: 12px !important;
+      }
+    }
+  }
+} 
+
+
+// end security modal css

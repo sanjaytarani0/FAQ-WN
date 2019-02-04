@@ -1,0 +1,106 @@
+<div class="formDiv">
+  <p class="sendCryptoTitle">Send Crypto</p>
+
+  <form [formGroup]="transferForm" autocomplete="off">
+    <div class="ContentDiv">
+   
+      <div class="form-group">
+          <label for="usr">ADDRESS OR GMAIL</label>
+          <input type="text" formControlName="toAddress" name="transferaddress" class="form-control">
+           <div *ngIf="toAddress.touched && !toAddress.valid">
+            <p class="inputFieldErrorMsg" *ngIf="toAddress.errors.required">Ethereum Address or Gmail is required</p>
+            <p class="inputFieldErrorMsg" *ngIf="toAddress.errors.checkValidAddress && !toAddress.errors.required">Invalid Gmail or Ethereum Address</p>
+          </div>
+        </div>
+
+      <div class="amountFormGroup">
+      <div class="form-group amountInputControl">
+        <label for="usr">AMOUNT</label>
+        <input type="text" formControlName="amount" name="transferAmount" class="form-control">
+        <div *ngIf="amount.touched && !amount.valid">
+            <p class="inputFieldErrorMsg" *ngIf="amount.errors.required">Amount is required</p>
+            <p class="inputFieldErrorMsg" *ngIf="amount.errors.pattern && !amount.errors.required">Invalid amount</p>
+          </div>
+      </div>
+
+      <img *ngIf="selectedToken == 'ETH'" class="dropdownIcon" src="../../../../assets/ether.png" alt="">
+      <img *ngIf="selectedToken == 'BNB'" class="dropdownIcon" src="../../../../assets/bnb.png" alt="">
+      <img *ngIf="selectedToken == 'ZRX'" class="dropdownIcon" src="../../../../assets/ZRX.png" alt="">
+      <img *ngIf="selectedToken == 'OMG'" class="dropdownIcon" src="../../../../assets/OmiseGO.png" alt="">
+      <img *ngIf="selectedToken == 'MKR'" class="dropdownIcon" src="../../../../assets/Maker.png" alt="">
+      <img *ngIf="selectedToken == 'VEN'" class="dropdownIcon" src="../../../../assets/VeChain.png" alt="">
+
+      <div class="form-group tokenSelectGroup">
+          <select class="form-control" id="sel1" (change)="changeTokenIcon($event.target.value)" formControlName="token">
+            <option *ngFor="let token of userTokensList" [value]="token.symbol">{{token.symbol}}</option>
+          </select>
+        </div>
+      </div>
+
+      <button [ladda]="isLoading" data-style="zoom-in" data-spinner-color="#FFF" [disabled]="!transferForm.valid" class="btn transferButton btn-block" (click)="transfer()">Send</button>
+
+      <button style="display:none;" (click)="handleTransferError()" id="handleError">test</button>
+      <button style="display:none;" (click)="handleSuccessMessage()" id="handleSuccess">test</button>
+
+      <!-- <button type="button" [ladda]="isLoading" data-style="zoom-in" data-spinner-color="#FFF" [disabled]="!transferForm.valid"
+          class="btn btn-primary" (click)="transfer()">Send Crypto</button> -->
+    </div>
+
+  </form>
+</div>
+
+
+
+<div class="modal fade" id="successModal" role="dialog">
+  <div class="modal-dialog">
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-body">
+        
+        <button type="button" class="close" data-dismiss="modal">&times;</button><br>
+        
+        <div class="contentDiv">
+
+              <img src="../../../../assets/checked.png" class="successIcon" alt="">
+
+              <p class="title">Transaction Successful !</p>
+              <p class="subTitle">Transaction Hash</p>
+              <!-- <p class="transactionInfoMsg">{{successMsg}}</p> -->
+              <p class="transactionInfoMsg">{{successMsg}}</p>
+
+            <button (click)="successModalHide()" class="btn btn-block btn-primary agreeButton">OK</button>
+
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</div>
+
+
+
+<div class="modal fade" id="errorModal" role="dialog">
+  <div class="modal-dialog">
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-body">
+        
+        <button type="button" class="close" data-dismiss="modal">&times;</button><br>
+        
+        <div class="contentDiv">
+
+              <img src="../../../../assets/failed.png" class="successIcon" alt="">
+
+              <p class="title">Transaction Failed</p>
+             
+              <p class="transactionInfoMsg">{{errorMsg}}</p>
+              <!-- <p class="transactionInfoMsg">{{errorMsg}}</p> -->
+
+            <button (click)="errorModalHide()" class="btn btn-block btn-primary agreeButton">OK</button>
+
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</div>

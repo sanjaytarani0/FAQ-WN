@@ -1,0 +1,431 @@
+/* Main Container */
+.container {
+    width: 100%;
+    max-width: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+/* Banner section */
+
+.banner{
+    width: 100%;
+    text-align: center;
+    height:  auto;
+    background: #334194;  
+}
+
+.banner-heading{
+    padding-top: 40px;
+    font-size: 22px;
+    font-family: 'Nunito Sans', sans-serif;
+    color: #ffffff;
+}
+
+.banner-text{
+    
+    font-size: 16px;
+    font-family: 'Nunito Sans', sans-serif;
+    color: #ffffff;
+    
+}
+
+/* Search Bar */
+
+.search{
+    padding-top: 15px;   
+}
+
+.search-bar{
+    width: 691px;
+    background-color: #101f78;
+    border-radius: 29.5px;
+    height: 59px;
+    color: #ccd3ff;
+    letter-spacing: 0.3px; 
+    margin: 0 auto;
+}
+
+.input-search{
+    padding-top: 17px;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: 0.3px;
+    text-align: left;
+    color: #ccd3ff; 
+    float: left;
+    width: 80%;
+    height: 60px;
+    line-height: 60px;
+    padding: 0 30px;
+}
+
+.fa-search{
+    color: #ffffff;
+    float: right;
+    line-height: 60px;
+    padding-right: 30px; 
+}
+
+/* Telegram Chat */
+
+.group-chat{
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 12px;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom:0px;
+    
+}
+
+.telegram-support{
+    display: inline-block;
+    padding-top: 12px;
+    margin-bottom: 40px;
+}
+
+.telegram-link{
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.group-chat a.telegram-link:hover{
+    text-decoration: underline;
+}
+
+
+/*body-area*/
+
+.body-area{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding: 30px 0px 10px 50px;
+    
+    height: auto;
+    overflow: auto;
+    margin-bottom: 80px;
+}
+
+/* Left Panel Body Area*/
+.leftPanel{
+    flex: 25%;
+    padding-left: 70px; 
+    padding-right: 0px;
+}
+.leftPanel li{
+    line-height: 2.5;
+}
+
+.toggle-bar{
+    display: none;
+}
+
+.link-tabs{
+    padding: 0px 10px 5px 15px;
+}
+
+
+.list-points{
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 15px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 2.25;
+  letter-spacing: normal;
+  text-align: left;
+  color: #334194;
+}
+
+.sideways{
+    display: block; 
+    border-radius: 5px; 
+  }
+
+  .content-heading{
+    font-family: 'Nunito Sans', sans-serif; 
+    font-size: 18px;
+    font-weight: 800;
+    line-height: 1.33;
+    text-align: left;
+    color: #334194;
+    padding: 15px 15px 10px 15px;
+}
+
+.nav-tabs{
+    border: none;
+    background: #ffffff !important;
+    width:75%;
+    margin: 10px 10px 10px 15px;
+}
+
+li.link-tabs a.list-points.active.show, li.link-tabs a:hover
+    { 
+       color:#3490ce;
+       text-decoration: none;
+     }
+
+     .active{
+         color: #3490ce;
+     }
+
+     
+  .left-panel li{
+    line-height: 2.0;
+}
+
+.link-tabs a.active::after{
+    font-family: 'Font Awesome\ 5 Free';
+    content: "\f0da";
+    font-weight:900;
+    float: right;
+    padding-right: 10px;
+    color: #334194;
+    padding-top: 4px;
+}
+
+.sm-screen-section{
+    display: none;
+}
+
+/* Right Panel Body Area*/
+.rightPanel_resources{
+    padding-top: 10px;
+    flex:75%;
+    padding-right: 70px; 
+    text-align: left;
+    overflow: auto;
+}
+
+.card{
+    border: none;
+}
+
+.rightPanel{
+    padding-left: 0px;
+}
+
+.panel-title{
+    line-height: 0.75;
+}
+
+input {
+    border: 0;
+    background: transparent;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+  }
+  input:focus{
+    outline: 0;
+  }
+  .input-placeholder{
+    background-color: #eee;
+    display: inline-block;
+    padding: 10px;
+  }
+
+  .tab-content{
+    height: auto;
+}
+.tab-pane{
+    margin-right: 70px;
+}
+
+.panel-heading .accordion-toggle::after {
+    /* symbol for "opening" panels */
+    font-family: 'Glyphicons Halflings';  /* essential for enabling glyphicon */
+    content: "-";    /* adjust as needed, taken from bootstrap.css */
+    float: right;        /* adjust as needed */
+    color: grey;  
+    font-size:26px;       /* adjust as needed */
+    padding-top: 3px;
+
+}
+
+
+
+.panel-heading .accordion-toggle.collapsed:after {
+    /* symbol for "collapsed" panels */
+    content: "+";    /* adjust as needed, taken from bootstrap.css */
+    padding-top: 3px;
+}
+
+
+.accordion-toggle{
+font-family: 'Nunito Sans', sans-serif; 
+font-size: 18px;
+font-weight: 800;
+font-style: normal;
+font-stretch: normal;
+line-height: 0.75;
+letter-spacing: normal;
+text-align: left;
+color: #334194;
+text-decoration: none;
+}
+
+.panel-body{
+font-family: 'Nunito Sans', sans-serif; 
+font-size: 14px;
+text-align: left;
+color: #130303;
+}
+
+.panel-default{
+    margin-bottom: 10px;
+}
+
+/* Media Queries */
+
+@media (max-width:1180px){
+    .container{
+        width: auto;
+    }
+
+    .banner{
+        width: auto;
+    }
+    .banner-heading{
+        width: auto;
+    }
+    .menu-button{
+        background-color: #eceff2 !important;
+        border: 1px solid lightgray;
+        margin:5px 0px 0px 5px;
+        display: inline-block;
+        
+    }
+    .search{
+        width: auto;
+        margin: 0px 10px 0px 20px
+    }
+
+    .rightPanel{
+        padding-left: 15px;
+    }
+    .panel-title{
+        margin: 0px;
+        
+    }
+
+    .prefix{
+        padding-top:3px;
+        color: #130303;
+    }
+
+   
+    .toggle-bar{
+        display: block;
+    }
+    .search-bar{
+        width: auto;
+    }
+
+    .input-search{
+        width: auto;
+    }
+
+    .tab-content{
+        margin: 0px;
+        width: auto;
+       
+    }
+    .clearfix{
+        overflow: auto;
+    }
+    .body-area{
+        width: auto;
+        height: auto;
+        padding:0px;
+        
+    }
+    .banner-text{
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .sm-screen-section{
+        display: inline; 
+         
+    }
+
+    .panel-body{
+        padding-top: 7px;
+    }
+
+
+    .leftPanel{
+        position: relative;
+        display: inline;
+    }
+
+    .rightPanel_resources{
+        width: auto;
+        margin: 0px;
+        padding-right: 0px;
+    }
+    .tab-content{
+        width: auto;
+        margin: 0px;
+
+    }
+
+    .tab-pane{
+        width: auto;
+        margin: 0px;
+    }
+
+    .leftPanel{
+        display: none;
+    }
+    .col-md-3{
+        padding-right: 0px !important;
+    }
+
+    .link-tabs{
+        display: inline-block;
+        background: #eceff2;
+        padding-bottom: 0px;
+    }
+
+    li.link-tabs a.list-points.active::after{
+        display: none;
+    }
+
+    .telegram-link{
+        text-decoration: underline;
+    }
+
+    .col-md-8{
+        flex:1;
+        max-width: 100%;
+
+    }
+}
+
+@media only screen and (min-width : 843px) and (max-width: 1298px) {
+    /* styles for browsers between 843 and 1298px; */
+    /* .col-md-8{
+        flex:1;
+        max-width: 100%;
+
+    } */
+
+}
+
+/* @media only screen and (min-width : 845px) and (max-width: 927px){
+    .col-md-8{
+        flex:1;
+        max-width: 100%;
+    }
+} */
+
+

@@ -1,0 +1,41 @@
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  padding-left: 40px;
+  padding-right: 40px;
+
+}
+
+p {
+  font-size: 13px;
+  color: #9e9e9e;
+
+  a {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .footer {
+    text-align: center !important;
+    position: absolute !important;
+    width: 100%;
+    height: auto !important;
+    line-height: 20px !important;
+    background-color: white;
+    display: flex;
+    justify-content: center !important;
+    flex-direction: column !important;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 15px !important;
+  }
+}
