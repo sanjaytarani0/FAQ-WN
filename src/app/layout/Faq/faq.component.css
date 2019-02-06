@@ -68,7 +68,9 @@
     color: #ffffff;
     float: right;
     line-height: 60px;
-    padding-right: 30px; 
+    padding: 2px 30px 0px 0px; 
+    width: 50px;
+    height: 50px;
 }
 
 /* Telegram Chat */
@@ -83,9 +85,9 @@
 }
 
 .telegram-support{
-    display: inline-block;
-    padding-top: 12px;
-    margin-bottom: 40px;
+    display: block;
+    padding-top: 17px;
+    padding-bottom: 40px;
 }
 
 .telegram-link{
