@@ -35,6 +35,10 @@
 .search{
     padding-top: 15px;   
 }
+input::placeholder{
+    font-style: italic;
+    color: #ccd3ff;
+}
 
 .search-bar{
     width: 691px;

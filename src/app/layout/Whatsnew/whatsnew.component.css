@@ -39,6 +39,10 @@
         letter-spacing: 0.3px; 
         margin: 0 auto;
     }
+    input::placeholder{
+        font-style: italic;
+        color: #ccd3ff;
+    }
     
     .input-search{
         padding-top: 17px;
